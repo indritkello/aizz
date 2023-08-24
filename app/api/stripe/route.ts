@@ -5,7 +5,14 @@ import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
 import { absoluteUrl } from "@/lib/utils";
 
-export const dynamic = "force-static";
+export const dynamic = 'auto'
+export const dynamicParams = true
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'auto'
+export const maxDuration = 5
+
 const settingsUrl = absoluteUrl("/settings");
 
 export async function GET() {
